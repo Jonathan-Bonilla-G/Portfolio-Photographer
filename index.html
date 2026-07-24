@@ -8,7 +8,7 @@
         <!-- informacion del sitio -->
 
         <title>Portfolio Photographer | Fotógrafo Profesional</title>
-        <meta name="desciption" content="Portfolio Photographer | Fotógrafo Profesional">
+        <meta name="description" content="Portfolio Photographer | Fotógrafo Profesional">
         
         <!-- Autor-->
 
@@ -16,7 +16,7 @@
         
         <!-- Favicon-->
 
-        <link rel="icon" href="assets/logos/favicon.ico">
+        <link rel="icon" href="assets/favicon/favicon.ico">
 
         <!-- CSS Base-->
 
@@ -25,16 +25,22 @@
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/style.css">
 
+        <!-- LAYOUT -->
+        
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/footer.css">
+
         <!-- Componentes-->
 
-        <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/hero.css">
         <link rel="stylesheet" href="css/gallery.css">
         <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/services.css">
         <link rel="stylesheet" href="css/testimonials.css">
+        <link rel="stylesheet" href="css/instagram.css">
         <link rel="stylesheet" href="css/contact.css">
-        <link rel="stylesheet" href="css/footer.css">
+
+        <!-- DISEÑOS ADAPTATIVOS-->
         <link rel="stylesheet" href="css/responsive.css">
 
     </head>
@@ -44,6 +50,44 @@
         <!--  HEADER-->
 
         <header>
+
+            <nav class="navbar" aria-label="Navegacion principal">
+
+                <!-- LOGO-->
+
+                <a href="#" class="logo">
+                    Portafolio
+                </a>
+
+                <!-- MENU -->
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="#hero">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#gallery">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="#about">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#services">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contacto</a>
+                    </li>
+
+                </ul>
+
+                <!-- BOTON-->
+
+                <a href="#contact" class="btn-contact">
+                    Reservar sesión
+                </a>
+
+                
+            </nav>
 
         </header>
 
@@ -93,7 +137,13 @@
 
         </footer>
 
+        <script src="js/navbar.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/contact.js"></script>
         <script src="js/main.js"></script>
+
         
 
     </body>

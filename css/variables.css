@@ -1,0 +1,113 @@
+/*
+    DESIGN TOKENS
+*/
+
+:root{
+
+    /*
+        COLORES   
+    */
+
+    --color-primary:#000000;
+    --color-secundary:#ffffff;
+
+    --color-accent:#c9a96e;
+
+    --color-text:#1f1f1f;
+    --color-text-light:#6b7280;
+
+    --color-background:#ffffff;
+    --color-surface:#f8f8f8;
+
+    --color-border: #e5e7eb;
+
+    /*
+    Tipografia
+    */
+
+    --font-primary:"Inter", sans-serif;
+    --font-secondary:"Cormorant Garamond", serif;
+
+    /*
+        TAMAÑOS
+    */
+
+    --fs-xs:0.74rem;
+    --fs-sm:0.875rem;
+    --fs-base:1rem;
+    --fs-lg:1.125rem;
+    --fs-xl:1.25rem;
+    --fs-2xl:1.5rem;
+    --fs-3xl:2rem;
+    --fs-4xl:3rem;
+    --fs-5xl:4rem;
+    
+    /*
+    PESO
+    */
+
+    --fw-light:300;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+
+    /*
+    ESPACIADO
+    */
+
+    --space-4:0.25rem;
+    --sapce-8:0.5rem;
+    --space-12:0.75rem;
+    --space-16:1rem;
+    --space-24:1.5rem;
+    --space-32:2rem;
+    --space-48:3rem;
+    --space-64:4rem;
+    --space-80:5rem;
+    --space-96:6rem;
+    --space-120:7.5rem;
+
+    /*
+    BORDES
+    */
+
+    --radius-sm:0.25rem;
+    --radius-md:0.5rem;
+    --radius-lg:1rem;
+    --radius-xl:2rem;
+    --radius-full:9999px;
+
+    /*
+    SOMBRAS
+    */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
+    --shadow-md:0 8px 20px rgba(0,0,0,.12);
+    --shadow-lg:0 15px 40px rgba(0,0,0,.18);
+
+    /*
+    TRANSICIONES
+    */
+
+    --transition-fats: .2s ease;
+    --transition-normal: .3s ease;
+    --transition-slow: .5 ease;
+
+    /*
+        CONTENEDOR
+    */
+
+    --container-width:1200px;
+    --container-pagging:1.5rem;
+
+    /*
+        Z-INDEX
+    */
+
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-overlay:900;
+    --z-modal:1000;
+    --z-tooltip:1100;
+}

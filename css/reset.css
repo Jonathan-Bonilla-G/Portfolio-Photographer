@@ -1,0 +1,101 @@
+/*
+--------------------
+RESET CSS
+base comun para todos los navegadores
+*/
+
+/*
+Reinicia margenes, paddings y modelo de caja
+*/
+
+*,
+*::before,
+*::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+Permite un desplazamiento suave al usar enlaces internos
+*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*
+Evita desbordamientos horizontales accidentales
+*/
+
+body{
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*
+Imagenes y contenido multimedia responsivos
+*/
+
+img,
+picture,
+video,
+canvas,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+/*
+formularios heredan la tipografia del sitio
+*/
+
+input,
+button,
+textarea,
+select{
+    font: inherit;
+}
+
+/*
+elimina estilos de listas
+*/
+
+ul,
+ol{
+    list-style: none;
+}
+
+/*
+los enlaces no tendran estilos por defecto
+*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+Mejora la apariencia de botones
+*/
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*
+Evita que el texto largo rompa el diseño
+*/
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    overflow-wrap: break-word;
+}
