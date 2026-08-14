@@ -1,0 +1,331 @@
+/* ==================================================
+   SECCIÓN: HERO (css/hero.css)
+   ================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: var(--hero-min-height);
+    
+    display: flex;
+    align-items: center;
+    
+    padding-top: var(--header-height);
+    padding-bottom: var(--space-48);
+    
+    overflow: hidden;
+    
+    isolation: isolate;
+
+    background-color: var(--color-background);
+}
+
+/* --------------------------------------------------
+   1. FONDO FOTOGRÁFICO Y OVERLAY
+   -------------------------------------------------- */
+.hero__background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../assets/images/hero/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+
+    z-index: -2;
+
+    transition: transform var(--transition-slow);
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(17, 17, 17, 0.95) 0%,
+        rgba(17, 17, 17, 0.7) 50%,
+        rgba(17, 17, 17, 0.25) 100%
+    );
+    z-index: -1;
+}
+
+/* --------------------------------------------------
+   2. CONTENEDOR Y LAYOUT
+   -------------------------------------------------- */
+.hero .container {
+    position: relative;
+    width: 100%;
+}
+
+.hero__layout {
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+
+    min-height: calc(var(--hero-min-height) - var(--header-height) - var(--space-48));
+}
+
+/* --------------------------------------------------
+   3. CONTENIDO PRINCIPAL
+   -------------------------------------------------- */
+.hero__content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    max-width: var(--hero-content-width);
+
+    gap: var(--space-24);
+}
+
+.hero__eyebrow {
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.hero__title {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-family: var(--font-secondary);
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: var(--fw-bold);
+    
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    color: var(--color-text);
+}
+
+
+
+.hero__title-line--accent {
+    color: var(--color-primary);
+}
+
+.hero__description {
+    margin: 0;
+
+    max-width: 32rem;
+
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-regular);
+    line-height: 1.7;
+
+    color: var(--color-text-soft);
+}
+
+/* --------------------------------------------------
+   4. ACCIONES (BOTONES)
+   -------------------------------------------------- */
+.hero__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+
+    flex-wrap: wrap;
+
+}
+
+/* --------------------------------------------------
+   5. REDES SOCIALES
+   -------------------------------------------------- */
+
+.hero__social {
+    position: absolute;
+
+    top: 50%;
+    right: var(--container-padding);
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--space-20);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.hero__social-link {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    color: var(--color-text-muted);
+
+    text-decoration: none;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.hero__social-link img {
+
+    display: block;
+
+    width: 1.125rem;
+    height: 1.125rem;
+
+    filter: brightness(0) invert(1);
+    opacity: 0.65;
+
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.hero__social-link:hover,
+.hero__social-link:focus-visible {
+
+    color: var(--color-primary);
+
+    transform: translateX(-2px);
+}
+
+.hero__social-link:hover img,
+.hero__social-link:focus-visible img {
+
+    opacity: 1;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(70%)
+        sepia(25%)
+        saturate(700%)
+        hue-rotate(355deg)
+        brightness(90%)
+        contrast(90%);
+}
+
+.hero__social-link:focus-visible {
+
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+
+    border-radius: var(--radius-sm);
+}
+
+/* Línea decorativa */
+
+.hero__social-line {
+
+    display: block;
+
+    width: 1px;
+    height: 2.5rem;
+
+    margin-top: var(--space-16);
+
+    background-color: var(--color-border-dark);
+}
+
+/* --------------------------------------------------
+   6. INDICADOR DE SCROLL
+   -------------------------------------------------- */
+.hero__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: var(--space-48);
+    
+    transform: translateX(-50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: var(--space-12);
+    
+    text-decoration: none;
+    
+    color: var(--color-text-muted);
+    
+    transition: color var(--transition-fast);
+}
+
+.hero__scroll:hover,
+.hero__scroll:focus-visible {
+    color: var(--color-primary);
+}
+
+.hero__scroll:focus-visible{
+
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.hero__scroll-icon {
+
+    position: relative;
+
+    width: 20px;
+    height: 32px;
+
+    border: 2px solid currentColor;
+    border-radius: var(--radius-lg);
+}
+
+.hero__scroll-icon::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    
+    width: 4px;
+    height: 6px;
+
+    border-radius: var(--radius-sm);
+
+    background-color: currentColor;
+    animation: scrollWheel 1.8s infinite ease-in-out;
+}
+
+.hero__scroll-text {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+@keyframes scrollWheel {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 12px); opacity: 0; }
+}

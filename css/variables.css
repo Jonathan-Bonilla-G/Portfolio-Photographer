@@ -5,42 +5,65 @@
 :root{
 
     /*
-        COLORES   
+        COLORES
+        PALETA PRINCIPAL   
     */
 
-    --color-primary:#000000;
-    --color-secundary:#ffffff;
+    /* Acentos*/
 
-    --color-accent:#c9a96e;
+    --color-primary:#c9a063;
+    --color-primary-dark: #b08c56;
+    --color-accent-light: #f0e6d6;
 
-    --color-text:#1f1f1f;
-    --color-text-light:#6b7280;
+    /*fondos*/
+    
+    --color-background: #111111;
+    --color-background-translucent: rgba(17, 17, 17, 0.95);
+    --color-background-alt: #1a1a1a;
+    --color-surface:#f7f7f7;
+    
+    /*Texto*/
 
-    --color-background:#ffffff;
-    --color-surface:#f8f8f8;
+    --color-text:#ffffff;
+    --color-text-soft: rgba(255, 255, 255, 0.82);
+    --color-text-muted: #a0a0a0;
+    --color-text-dark: #1f1f1f;
+    --color-text-dark-muted: #666666;
 
-    --color-border: #e5e7eb;
+    /*Bordes*/
+
+    --color-border: #e0e0e0;
+    --color-border-dark: rgba(255,255,255,.18);
+    --color-border-accent: #c9a063;
+
+    /* basicos*/
+
+    --color-white: #ffffff;
+    --color-black: #000000;
 
     /*
     Tipografia
     */
 
-    --font-primary:"Inter", sans-serif;
-    --font-secondary:"Cormorant Garamond", serif;
+/* Fuente principal para interfaz y contenido */
+--font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+
+/* Fuente para títulos destacados */
+--font-secondary: 'Cormorant Garamond', Georgia, serif;
 
     /*
-        TAMAÑOS
+        TAMAÑOS DE FUENTE
     */
 
-    --fs-xs:0.74rem;
+    --fs-xs:0.75rem;
     --fs-sm:0.875rem;
     --fs-base:1rem;
-    --fs-lg:1.125rem;
-    --fs-xl:1.25rem;
-    --fs-2xl:1.5rem;
-    --fs-3xl:2rem;
-    --fs-4xl:3rem;
-    --fs-5xl:4rem;
+    --fs-md:1.125rem;
+    --fs-lg:1.25rem;
+    --fs-xl:1.5rem;
+    --fs-2xl:2rem;
+    --fs-3xl:3rem;
+    --fs-4xl:4rem;
     
     /*
     PESO
@@ -57,9 +80,10 @@
     */
 
     --space-4:0.25rem;
-    --sapce-8:0.5rem;
+    --space-8:0.5rem;
     --space-12:0.75rem;
     --space-16:1rem;
+    --space-20:1.25rem;
     --space-24:1.5rem;
     --space-32:2rem;
     --space-48:3rem;
@@ -69,7 +93,7 @@
     --space-120:7.5rem;
 
     /*
-    BORDES
+    BORDES y RADIOS
     */
 
     --radius-sm:0.25rem;
@@ -82,32 +106,48 @@
     SOMBRAS
     */
 
-    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
-    --shadow-md:0 8px 20px rgba(0,0,0,.12);
-    --shadow-lg:0 15px 40px rgba(0,0,0,.18);
+    --shadow-sm: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 0.8rem 2rem rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.16);
+    
+    /* Sombras de interacción */
 
+    --shadow-primary: 0 0.25rem 0.75rem rgba(201, 160, 99, 0.25);
     /*
     TRANSICIONES
     */
 
-    --transition-fats: .2s ease;
+    --transition-fast: .2s ease;
     --transition-normal: .3s ease;
-    --transition-slow: .5 ease;
-
+    --transition-slow: .5s ease;
     /*
-        CONTENEDOR
+        EFECTOS
     */
 
-    --container-width:1200px;
-    --container-pagging:1.5rem;
-
+    --blur-header: 8px;
     /*
         Z-INDEX
     */
 
+    --z-base:1;
     --z-dropdown: 100;
     --z-sticky: 500;
     --z-overlay:900;
     --z-modal:1000;
     --z-tooltip:1100;
+    
+    /*
+        CONTENEDOR
+    */
+
+    --container-width:1200px;
+    --container-padding:1.5rem;
+    --header-height: 5.0rem;
+
+    /* HERO */
+    --hero-min-height: 100svh;
+    --hero-content-width: 38rem;
+    --hero-overlay-opacity: 0.65;
+    
 }
+

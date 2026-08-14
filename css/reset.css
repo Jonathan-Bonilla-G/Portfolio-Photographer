@@ -23,17 +23,30 @@ Permite un desplazamiento suave al usar enlaces internos
 
 html{
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
+
 
 /*
 Evita desbordamientos horizontales accidentales
+
 */
 
 body{
 
     min-height: 100vh;
-    overflow: hidden;
+    min-height: 100dvh;
+
+
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    
+
 }
+
 
 /*
 Imagenes y contenido multimedia responsivos
@@ -46,6 +59,7 @@ canvas,
 svg{
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 /*
@@ -57,15 +71,22 @@ button,
 textarea,
 select{
     font: inherit;
+    color: inherit;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /*
-elimina estilos de listas
+Mejora la apariencia de botones
 */
 
-ul,
-ol{
-    list-style: none;
+
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 /*
@@ -77,14 +98,41 @@ a{
 }
 
 /*
-Mejora la apariencia de botones
+elimina estilos de listas
 */
 
-button{
-    background: none;
-    border: none;
-    cursor: pointer;
+ul,
+ol{
+    list-style: none;
 }
+
+
+
+
+
+/*
+    TABLAS
+*/
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    TIPOGRAFIA
+    */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font: inherit;
+    font-weight: inherit;
+}
+
 
 /*
 Evita que el texto largo rompa el diseño
@@ -99,3 +147,40 @@ h5,
 h6{
     overflow-wrap: break-word;
 }
+
+/* ==========================
+   Accesibilidad
+========================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
+
+/* ==================================================
+   BREAKPOINTS (Referencia)
+
+   Mobile:         480px
+   Tablet:         768px
+   Laptop:        1024px
+   Desktop:       1280px
+   Large Desktop: 1440px
+
+   Nota:
+   Las variables CSS no pueden utilizarse de forma
+   estándar dentro de @media, por lo que estos valores
+   se mantienen únicamente como referencia.
+================================================== */

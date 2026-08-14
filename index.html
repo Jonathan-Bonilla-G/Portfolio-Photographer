@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
     <head>
         <!--configuracion basica-->
         <meta charset="UTF-8">
@@ -8,15 +8,40 @@
         <!-- informacion del sitio -->
 
         <title>Portfolio Photographer | Fotógrafo Profesional</title>
-        <meta name="description" content="Portfolio Photographer | Fotógrafo Profesional">
-        
-        <!-- Autor-->
-
+        <meta name="description" content="Portafolio profesional de fotografía especializado en retratos, fotografía editorial y cobertura de eventos en México.">
         <meta name="author" content="Jonathan Bonilla">
-        
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#111111">
+
         <!-- Favicon-->
 
-        <link rel="icon" href="assets/favicon/favicon.ico">
+        <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+        <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+        <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+        <!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Portfolio Photographer | Fotógrafo Profesional">
+        <meta property="og:description" content="Capturando momentos inolvidables. Explora mi portafolio de fotografía editorial, retratos y eventos en México.">
+        <!-- Cambiar por el dominio definitivo al publicar-->
+        <meta property="og:image" content="assets/images/og-image.jpg">
+        <meta property="og:locale" content="es_MX">
+        
+        <!--
+    <meta property="og:url" content="https://danielrojasfotografia.com">
+    -->
+    <!-- TWITTER CARD-->
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Portfolio Photographer | Fotógrafo Profesional">
+        <meta name="twitter:description" content="fotografia editorial, retratos y eventos.">
+        <meta name="twitter:image" content="assets/images/og-image.jpg">
+
+        <!-- GOOGLE FONTS -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- CSS Base-->
 
@@ -24,6 +49,9 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/style.css">
+
+        <!-- 2. COMPONENTES REUTILIZABLES -->
+        <link rel="stylesheet" href="css/components/buttons.css">
 
         <!-- LAYOUT -->
         
@@ -34,6 +62,7 @@
 
         <link rel="stylesheet" href="css/hero.css">
         <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/lightbox.css">
         <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/services.css">
         <link rel="stylesheet" href="css/testimonials.css">
@@ -42,68 +71,671 @@
 
         <!-- DISEÑOS ADAPTATIVOS-->
         <link rel="stylesheet" href="css/responsive.css">
+        <!-- 
+        JAVASCRIPT
+         -->
+
+        <script src="js/navbar.js" defer></script>
+        <script src="js/gallery.js" defer></script>
+        <script src="js/animations.js" defer></script>
+        <script src="js/scroll.js" defer></script>
+        <script src="js/contact.js" defer></script>
+        <script src="js/main.js" defer></script>
+
 
     </head>
 
     <body>
 
+       <!-- =========================
+         SKIP LINK (ACCESIBILIDAD)
+          
+    ========================== -->
+    <a href="#main-content" class="skip-link">
+                Saltar al contenido principal
+
+    </a>
+   
+
         <!--  HEADER-->
 
-        <header>
+        <header class="header">
 
-            <nav class="navbar" aria-label="Navegacion principal">
+            <div class="container">
 
-                <!-- LOGO-->
+                <nav class="navbar" id="navbar" aria-label="Navegación principal">
 
-                <a href="#" class="logo">
-                    Portafolio
-                </a>
+                    <!-- LOGO-->
 
-                <!-- MENU -->
+                    <a href="#hero" class="navbar__logo" aria-label="Ir al inicio">
+                        Portafolio
+                    </a>
 
-                <ul class="nav-links">
-                    <li>
-                        <a href="#hero">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#gallery">Galeria</a>
-                    </li>
-                    <li>
-                        <a href="#about">Sobre mí</a>
-                    </li>
-                    <li>
-                        <a href="#services">Servicios</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contacto</a>
-                    </li>
+                    <!-- MENU -->
 
-                </ul>
+                    <div class="navbar__menu">
+                    <ul class="navbar__list" id="navbar-menu">
+                
+                        <li class="navbar__item">
+                            <a href="#gallery" class="navbar__link">Galería</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#about" class="navbar__link">Sobre mí</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#services" class="navbar__link">Servicios</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#contact" class="navbar__link">Contacto</a>
+                        </li>
+
+                    </ul>
 
                 <!-- BOTON-->
 
-                <a href="#contact" class="btn-contact">
+                    <a href="#contact" class="navbar__btn btn btn--primary">
                     Reservar sesión
-                </a>
+                    </a>
 
+                </div>
+
+                <!-- BOTON MENU HAMBUGUESA-->
+
+                <button class="navbar__toggle" type="button" aria-controls="navbar-menu" aria-expanded="false" aria-label="Abrir menú de Navegación">
+
+                    <span class="navbar__bar"></span>
+                    <span class="navbar__bar"></span>
+                    <span class="navbar__bar"></span>
+                </button>
+
+                <!-- OVERLAY -->
+                 <div class="navbar__overlay"></div>
                 
-            </nav>
+                </nav>
+            
+                
+            </div>
+                
 
         </header>
 
         <!-- MAIN-->
 
-        <main>
+        
+        <main id="main-content">
 
             <!-- HERO -->
-             <section id="hero">
+             <section id="hero" class="hero" aria-labelledby="hero-title">
 
+                <!-- FONDO FOTOGRAFICO -->
+                 <div class="hero__background" aria-hidden="true"></div>
+
+                 <!-- OVERLAY -->
+
+                 <div class="hero__overlay" aria-hidden="true"></div>
+
+                 <div class="container">
+                    <div class="hero__layout">
+
+                        <!-- CONTENIDO PRINCIPAL-->
+
+                        <div class="hero__content">
+                            <p class="hero__eyebrow">
+                                Fotografía profesional
+                            </p>
+
+                            <h1 class="hero__title" id="hero-title">
+                                <span class="hero__title-line">
+                                    Historias reales,
+                                </span>
+
+                                <span class="hero__title-line hero__title-line--accent">
+                                    recuerdos eternos.
+                                </span>
+
+                            </h1>
+                            <!--DESCRIPCION-->
+                            <p class="hero__description">
+
+                                Fotografía profesional para momentos únicos que merecen ser recordados para siempre
+                            </p>
+
+                            <div class="hero__actions">
+
+                                <a href="#gallery" class="btn btn--primary">
+                                    Ver portafolio
+                                </a>
+
+                                <a href="#contact" class="btn btn--secondary">
+                                    Reservar sesión
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- REDES SOCIALES-->
+
+                        <aside class="hero__social" aria-label="Redes sociales">
+
+                            <ul class="hero__social-list">
+                                <li>
+                                    <a href="#" class="hero__social-link" aria-label="Instagram">
+                                        <img 
+                                            src="https://cdn.simpleicons.org/instagram"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hero__social-link" aria-label="Facebook">
+                                        <img
+                                            src="https://cdn.simpleicons.org/facebook"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hero__social-link" aria-label="Pinterest">
+                                        <img
+                                            src="https://cdn.simpleicons.org/pinterest"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="hero__social-line" aria-hidden="true">
+
+                            </span>
+                        </aside>
+
+                        <!-- INDICADOR DE SCROLL-->
+
+                        <a href="#gallery" class="hero__scroll" aria-label="Ir a la galería">
+                            <span class="hero__scroll-icon"></span>
+                            <span class="hero__scroll-text">
+                                Scroll
+                            </span>
+                        </a>
+                    </div>
+                 </div>
+
+                 <!-- DECORACIONES -->
+
+                 <div class="hero__decorations" aria-hidden="true">
+
+                 </div>
              </section>
 
              <!-- GALLERY -->
-              <section id="gallery">
+              <section 
+              class="gallery" 
+              id="gallery"
+              aria-labelledby="gallery-title">
 
+                <!-- GALLERY HEADER -->
+
+                <header class="gallery__header">
+
+                    <span class="gallery__eyebrow">
+                        Galería
+                    </span>
+
+                    <h2 class="gallery__title" id="gallery-title">
+                        Historias que permanecen.
+                    </h2>
+
+                    <p class="gallery__description">
+                        Una selección de momentos, retratos y experiencias
+                        capturados con una mirada auténtica y editorial.
+                    </p>
+                </header>
+
+                <!--  GALLERY FILTERS -->
+
+                <div class="gallery__filters" role="group" aria-label="Filtrar galería">
+
+                    <button
+                    class="gallery__filter gallery__filter--active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true">
+                            Todas
+                    </button>
+
+                    <button
+                    class="gallery__filter"
+                    type="button"
+                    data-filter="retratos"
+                    aria-pressed="false">
+                        Retratos
+                    </button>
+
+                    <button 
+                    class="gallery__filter"
+                    type="button"
+                    data-filter="parejas"
+                    aria-pressed="false">
+                        Parejas
+                    </button>
+
+                    <button 
+                    class="gallery__filter"
+                    type="button"
+                    data-filter="momentos"
+                    aria-pressed="false">
+                        Momentos
+                    </button>
+
+                    <button 
+                    class="gallery__filter" 
+                    type="button"
+                    data-filter="editorial"
+                    aria-pressed="false">
+                        Editorial
+                    </button>
+
+                </div>
+
+                <!-- GALLERY GRID -->
+
+                <ul class="gallery__grid">
+
+                    <!-- PHOTO 01 -->
+                     <li class="gallery__item gallery__item--featured" data-category="retratos">
+
+                        <button class="gallery__image-button" type="button" aria-label="Abrir fotografía de retrato en pantalla completa">
+                            <img class="gallery__image" src="assets/images/gallery/retrato-01.jpg" alt="Retrato de una mujer en un entorno natural" decoding="async">
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+                        </button>
+
+                     </li>
+
+                     <!-- Photo 02 -->
+                    <li
+                        class="gallery__item"
+                        data-category="parejas">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de pareja en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-01.jpg"
+                                alt="Pareja compartiendo un momento íntimo al aire libre"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 03 -->
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="momentos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de un momento especial en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-01.jpg"
+                                alt="Momento espontáneo durante una celebración"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 04 -->
+                    <li
+                        class="gallery__item"
+                        data-category="retratos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de retrato en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-02.jpg"
+                                alt="Retrato editorial de una mujer"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 05 -->
+                    <li
+                        class="gallery__item gallery__item--featured"
+                        data-category="editorial">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía editorial en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/editorial-01.jpg"
+                                alt="Retrato editorial con iluminación dramática"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 06 -->
+                    <li
+                        class="gallery__item"
+                        data-category="parejas">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de pareja en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-02.jpg"
+                                alt="Pareja caminando durante una sesión fotográfica"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 07 -->
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="retratos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de retrato en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-03.jpg"
+                                alt="Retrato masculino realizado en una sesión exterior"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 08 -->
+                    <li
+                        class="gallery__item"
+                        data-category="momentos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de un momento espontáneo en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-02.jpg"
+                                alt="Momento espontáneo entre dos personas"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 09 -->
+                    <li
+                        class="gallery__item"
+                        data-category="parejas">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de pareja en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-03.jpg"
+                                alt="Pareja abrazándose durante una sesión fotográfica"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 10 -->
+                    <li
+                        class="gallery__item gallery__item--featured"
+                        data-category="editorial">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía editorial en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/editorial-02.jpg"
+                                alt="Fotografía editorial de moda en estudio"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 11 -->
+                    <li
+                        class="gallery__item"
+                        data-category="momentos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de un momento especial en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-03.jpg"
+                                alt="Momento emotivo durante una celebración"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- Photo 12 -->
+                    <li
+                        class="gallery__item"
+                        data-category="retratos">
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de retrato en pantalla completa">
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-04.jpg"
+                                alt="Retrato femenino con estética editorial"
+                                loading="lazy"
+                                decoding="async">
+
+                            <span class="gallery__overlay" aria-hidden="true">
+                                <span class="gallery__icon">+</span>
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                </ul>
+
+                <!-- GALLERY CTA -->
+
+                <div class="gallery__cta">
+
+                    <p class="gallery__cta-text">
+                        ¿Listo para contar tu historia?
+                    </p>
+
+                    <a class="btn btn--primary" href="#contact">
+                        Reservar sesión 
+                    </a>
+
+                </div>
               </section>
+
+              <!-- ==================================================
+     GALLERY LIGHTBOX
+     ================================================== -->
+
+            <dialog
+                class="lightbox"
+                aria-labelledby="lightbox-title">
+
+                <div class="lightbox__container">
+
+                    <!-- Lightbox Header -->
+
+                    <div class="lightbox__header">
+
+                        <h2
+                            class="lightbox__title"
+                            id="lightbox-title">
+                            Vista ampliada
+                        </h2>
+
+                        <button
+                            class="lightbox__close"
+                            type="button"
+                            aria-label="Cerrar fotografía">
+                            <span aria-hidden="true">×</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- Lightbox Content -->
+
+                    <div class="lightbox__content">
+
+                        <button
+                            class="lightbox__control lightbox__control--prev"
+                            type="button"
+                            aria-label="Fotografía anterior">
+                            <span aria-hidden="true">‹</span>
+                        </button>
+
+
+                        <figure class="lightbox__figure">
+
+                            <img
+                                class="lightbox__image"
+                                src=""
+                                alt="">
+
+                        </figure>
+
+
+                        <button
+                            class="lightbox__control lightbox__control--next"
+                            type="button"
+                            aria-label="Fotografía siguiente">
+                            <span aria-hidden="true">›</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- Lightbox Footer -->
+
+                    <div class="lightbox__footer">
+
+                        <span
+                            class="lightbox__counter"
+                            aria-live="polite">
+                            1 / 12
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </dialog>
 
               <!-- ABOUT -->
 
@@ -133,22 +765,15 @@
 
         <!-- FOOTER-->
 
-        <footer>
+        <footer class="footer">
 
         </footer>
 
-        <script src="js/navbar.js"></script>
-        <script src="js/gallery.js"></script>
-        <script src="js/animations.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/contact.js"></script>
-        <script src="js/main.js"></script>
 
         
 
     </body>
 
-
-
-
 </html>
+
+

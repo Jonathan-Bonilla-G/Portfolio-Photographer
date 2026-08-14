@@ -1,0 +1,104 @@
+.btn{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-8);
+
+    padding: var(--space-12) var(--space-24);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: 1;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    user-select: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.btn--primary{
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border-color:var(--color-primary);
+
+}
+
+.btn--primary:hover{
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+
+}
+
+.btn--primary:focus-visible{
+
+    outline:2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+.btn--primary:active{
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* --------------------------------------------------
+   BOTÓN SECUNDARIO (OUTLINE)
+   -------------------------------------------------- */
+.btn--secondary {
+     
+    background-color: transparent;
+
+    color: var(--color-text);
+    
+    border: 1px solid var(--color-border-dark);
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+
+    background-color: var(--color-background-alt);
+    
+    color: var(--color-primary);
+    
+    border-color: var(--color-primary);
+
+    transform: translateY(-2px);
+
+    
+}
+
+
+.btn--secondary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+.btn--secondary:active {
+    transform: translateY(0);
+}
