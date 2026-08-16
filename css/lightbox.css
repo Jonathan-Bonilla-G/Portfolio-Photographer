@@ -8,9 +8,21 @@
    -------------------------------------------------- */
 
 .lightbox {
-    width: min(100% - (var(--container-padding) * 2), 90rem);
+    inset: 0;
+    margin: auto;
+
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        90rem
+    );
+
     max-width: 90rem;
-    height: min(100vh - (var(--container-padding) * 2), 90vh);
+
+    height: min(
+        calc(100vh - (var(--container-padding) * 2)),
+        90vh
+    );
+
     max-height: 90vh;
 
     padding: 0;
@@ -31,6 +43,7 @@
 
 .lightbox::backdrop {
     background-color: rgba(0, 0, 0, 0.88);
+
     backdrop-filter: blur(4px);
 }
 
@@ -102,6 +115,7 @@
     line-height: 1;
 
     cursor: pointer;
+    user-select: none;
 
     transition:
         color var(--transition-normal),
@@ -144,6 +158,7 @@
 
     width: 100%;
     height: 100%;
+
     min-width: 0;
     min-height: 0;
 
@@ -153,13 +168,15 @@
 .lightbox__image {
     display: block;
 
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 
     max-width: 100%;
     max-height: 100%;
 
     object-fit: contain;
+
+    user-select: none;
 }
 
 
@@ -192,6 +209,7 @@
     line-height: 1;
 
     cursor: pointer;
+    user-select: none;
 
     transition:
         color var(--transition-normal),

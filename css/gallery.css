@@ -170,6 +170,10 @@
     aspect-ratio: auto;
 }
 
+.gallery__item[hidden] {
+    display: none !important;
+}
+
 
 /* --------------------------------------------------
    GALLERY IMAGE BUTTON
