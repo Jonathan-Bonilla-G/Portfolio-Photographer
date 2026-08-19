@@ -885,3 +885,64 @@
     }
 
 }
+
+/* ==================================================
+   ABOUT — LAPTOP
+   1199px
+   ================================================== */
+
+@media (max-width: 1199px) {
+
+    .about__content {
+        gap: var(--space-64);
+    }
+
+    .about__info {
+        max-width: 520px;
+    }
+
+    .about__title {
+        font-size: clamp(2.4rem, 4vw, var(--fs-4xl));
+    }
+
+    .about__description {
+        max-width: 620px;
+    }
+
+    .about__stats {
+        max-width: 900px;
+    }
+}
+
+/* ==================================================
+   ABOUT — TABLET
+   899px
+   ================================================== */
+
+@media(max-width:959px){
+
+    .about__content{
+        grid-template-columns: 1fr;
+        gap: var(--space-48);
+    }
+
+    .about__image{
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    .about__info{
+        max-width: 680px;
+        margin-inline: auto;
+    }
+}
+
+@media(max-width:480px){
+    .about__cta{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
