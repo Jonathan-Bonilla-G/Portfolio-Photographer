@@ -35,6 +35,14 @@ body {
     padding-right: var(--container-padding);
 }
 
+/* Scroll con navbar fijo */
+.services,
+.about,
+.gallery,
+.contact {
+    scroll-margin-top: var(--header-height);
+}
+
 /* --------------------------------------------------
    ACCESIBILIDAD (SKIP LINK)
    -------------------------------------------------- */
