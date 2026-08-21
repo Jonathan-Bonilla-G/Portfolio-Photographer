@@ -39,7 +39,8 @@ body {
 .services,
 .about,
 .gallery,
-.contact {
+.contact
+.testimonials {
     scroll-margin-top: var(--header-height);
 }
 
