@@ -238,9 +238,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="hero__social-link" aria-label="Pinterest">
+                                    <a href="#" class="hero__social-link" aria-label="WhatsApp">
                                         <img
-                                            src="https://cdn.simpleicons.org/pinterest"
+                                            src="https://cdn.simpleicons.org/whatsapp"
                                             alt=""
                                             aria-hidden="true"
                                         >
@@ -1226,7 +1226,7 @@
                         
                         <blockquote class="testimonial__quote">
 
-                            Las fotograías lograron capturar exactamente
+                            Las fotografías lograron capturar exactamente
                             lo que quería transmitir. Me sentí muy cómodo
                             durante toda la sesión.
                         </blockquote>
@@ -1287,7 +1287,160 @@
 
               <!-- CONTACT -->
 
-              <section id="contact">
+              <section class="contact" id="contact" aria-labelledby="contact-title">
+                <div class="container">
+                    <div class="contact__grid">
+                        
+                        <!-- INTRO -->
+
+                        <div class="contact__intro">
+                            <span class="contact__eyebrow">
+                                Contacto
+                            </span>
+                            <h2 class="contact__title" id="contact-title">
+                                Hablemos sobre tu próxima historia.
+                            </h2>
+                            <p class="contact__description">
+                                Cuéntame qué tienes en mente, qué tipo de sesión
+                                buscas y qué quieres transmitir. Será un placer
+                                conocer tu idea y ayudarte a convertirla en imágenes.
+                            </p>
+
+                            <!-- CONTACT DETAILS -->
+
+                            <div class="contact__details">
+
+                                <div class="contact__detail">
+                                    <span class="contact__detail-label">
+                                        Correo
+                                    </span>
+                                    <a 
+                                    href="mailto:correo@ejemplo.com"
+                                    class="contact__detail-link"
+                                    >
+                                            correo@ejemplo.com
+                                    </a>
+                                </div>
+                                <div class="contact__detail">
+                                    <span class="contact__detail-label">
+                                        Instagram
+                                    </span>
+                                    <a 
+                                    href="#"
+                                    class="contact__detail-link" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                        @fotografo
+                                    </a>
+                                </div>
+                                <div class="contact__detail">
+                                    <span class="contact__detail-label">
+                                        WhatsApp
+                                    </span>
+
+                                    <a 
+                                    href="https://wa.me/52XXXXXXXXXX"
+                                    class="contact__detail-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    +52 xxx xxx xxxx
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- FORM -->
+
+                        <form class="contact__form">
+
+                            <div class="contact__field">
+                                <label for="contact-name">
+                                    Nombre
+                                </label>
+
+                                <input 
+                                type="text" 
+                                id="contact-name" 
+                                name="name"
+                                placeholder="Tu nombre" 
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="80" 
+                                required
+                                >
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-email">
+                                    Correo electrónico
+                                </label>
+
+                                <input 
+                                type="email" 
+                                id="contact-email" 
+                                name="email"
+                                placeholder="tu@correo.com" 
+                                autocomplete="email"
+                                maxlength="120" 
+                                required
+                                >
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-session">
+                                    Tipo de sesión
+                                </label>
+                                <select 
+                                name="session" 
+                                id="contact-session" 
+                                required
+                                >
+                                    <option value="" selected disabled>
+                                        Selecciona un tipo de sesión
+                                    </option>
+
+                                    <option value="retrato">
+                                        Retrato
+                                    </option>
+
+                                    <option value="sesion-personal">
+                                        Sesión personal
+                                    </option>
+                                    <option value="pareja">
+                                        Pareja
+                                    </option>
+                                    <option value="evento">
+                                        Evento
+                                    </option>
+                                    <option value="retrato-profesional">
+                                        Retrato profesional
+                                    </option>
+                                    <option value="otro">
+                                        Otro
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-message">
+                                    Cuéntame sobre tu proyecto
+                                </label>
+
+                                <textarea 
+                                name="message" 
+                                id="contact-message" 
+                                rows="6"
+                                minlength="10"
+                                maxlength="1000" 
+                                placeholder="Cuéntame sobre tu idea, fecha aproximada, ubicación o cualquier detalle que quieras compartir." 
+                                required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">
+                                Enviar solicitud
+                            </button>
+                        </form>
+                    
+
+                    </div>
+                </div>
 
               </section>
 

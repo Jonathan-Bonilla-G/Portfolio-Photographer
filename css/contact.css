@@ -1,0 +1,156 @@
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+    padding-block: var(--space-120);
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-96);
+    align-items: start;
+}
+
+/* ========================================
+   INTRO
+======================================== */
+
+.contact__intro {
+    max-width: 520px;
+}
+
+.contact__eyebrow {
+    display: inline-block;
+    margin-bottom: var(--space-24);
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.contact__title {
+    margin-bottom: var(--space-32);
+}
+
+.contact__description {
+    max-width: 480px;
+    margin-bottom: var(--space-48);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* ========================================
+   CONTACT DETAILS
+======================================== */
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+}
+
+.contact__detail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.contact__detail-label {
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.contact__detail-link {
+    color: var(--color-text);
+    transition: color var(--transition-normal);
+}
+
+.contact__detail-link:hover {
+    color: var(--color-primary);
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.contact__field label {
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-text);
+}
+
+.contact__field input,
+.contact__field select,
+.contact__field textarea {
+    width: 100%;
+    padding: var(--space-12) 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border-dark);
+    border-radius: 0;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    transition: border-color var(--transition-normal);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+}
+
+/* ========================================
+   SELECT
+======================================== */
+
+.contact__field select {
+    padding-right: var(--space-32);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    cursor: pointer;
+}
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+.contact__field textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* ========================================
+   FOCUS
+======================================== */
+
+.contact__field input:focus,
+.contact__field select:focus,
+.contact__field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-primary);
+}

@@ -1200,3 +1200,24 @@
     }
 
 }
+
+/* ========================================
+   CONTACT — TABLET
+======================================== */
+
+@media (max-width: 1023px) {
+
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-64);
+    }
+
+    .contact__intro {
+        max-width: 640px;
+    }
+
+    .contact__description {
+        max-width: 600px;
+    }
+
+}
