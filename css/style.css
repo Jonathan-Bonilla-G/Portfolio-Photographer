@@ -9,7 +9,7 @@
    html {
     scroll-behavior: smooth;
     /* Asegura que 1rem = 16px por defecto */
-    font-size: 100%; 
+    font-size: 100%;
 }
 
 body {
@@ -39,8 +39,9 @@ body {
 .services,
 .about,
 .gallery,
-.contact
-.testimonials {
+.testimonials,
+.instagram,
+.contact {
     scroll-margin-top: var(--header-height);
 }
 

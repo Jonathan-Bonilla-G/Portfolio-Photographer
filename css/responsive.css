@@ -1201,6 +1201,147 @@
 
 }
 
+/* ==================================================
+   INSTAGRAM RESPONSIVE
+   ================================================== */
+
+/* --------------------------------------------------
+   TABLET
+   Max-width: 991px
+   -------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .instagram {
+        padding-block: var(--space-96);
+    }
+
+    .instagram__header {
+        margin-bottom: var(--space-48);
+    }
+
+    .instagram__title {
+        font-size: var(--fs-3xl);
+    }
+
+    .instagram__description {
+        max-width: 36rem;
+    }
+
+    .instagram__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-16);
+    }
+
+}
+
+
+/* --------------------------------------------------
+   MOBILE
+   Max-width: 767px
+   -------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .instagram {
+        padding-block: var(--space-64);
+    }
+
+    .instagram__header {
+        margin-bottom: var(--space-40);
+    }
+
+    .instagram__eyebrow {
+        margin-bottom: var(--space-12);
+        font-size: var(--fs-xs);
+    }
+
+    .instagram__title {
+        max-width: 100%;
+        font-size: clamp(2rem, 8vw, 2.75rem);
+        line-height: 1.08;
+    }
+
+    .instagram__description {
+        max-width: 100%;
+        font-size: var(--fs-base);
+        line-height: 1.6;
+    }
+
+    .instagram__username {
+        display: inline-block;
+        margin-top: var(--space-12);
+    }
+
+    .instagram__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-12);
+    }
+
+    .instagram__cta {
+        margin-top: var(--space-40);
+    }
+
+}
+
+
+/* --------------------------------------------------
+   MOBILE PEQUEÑO
+   Max-width: 375px
+   -------------------------------------------------- */
+
+@media (max-width: 375px) {
+
+    .instagram {
+        padding-block: var(--space-48);
+    }
+
+    .instagram__header {
+        margin-bottom: var(--space-32);
+    }
+
+    .instagram__title {
+        font-size: var(--fs-xl);
+    }
+
+    .instagram__description {
+        font-size: var(--fs-sm);
+    }
+
+    .instagram__grid {
+        gap: var(--space-8);
+    }
+
+    .instagram__cta {
+        margin-top: var(--space-32);
+    }
+
+}
+
+
+/* ==================================================
+   INSTAGRAM — REDUCED MOTION
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .instagram__image,
+    .instagram__overlay,
+    .instagram__username,
+    .instagram__cta-link {
+        transition: none;
+    }
+
+    .instagram__item:hover .instagram__image {
+        transform: none;
+    }
+
+    .instagram__cta-link:hover {
+        gap: var(--space-8);
+    }
+
+}
+
 /* ========================================
    CONTACT — TABLET
 ======================================== */
