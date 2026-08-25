@@ -340,6 +340,10 @@
         padding-bottom: var(--space-48);
     }
 
+    .hero__background {
+        background-position: 71% center;
+    }
+
     .hero__layout {
         display: flex;
         flex-direction: column;
@@ -443,33 +447,100 @@
 
 }
 
-/* --------------------------------------------------
-   MOBILE LANDSCAPE
-   Pantallas móviles en orientación horizontal
-   -------------------------------------------------- */
-
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 991px) and (orientation: landscape) {
 
     .hero {
-        min-height: auto;
-        padding-bottom: var(--space-32);
+
+        min-height: 100svh;
+
+        padding-top: var(--header-height, 80px);
+
+        padding-bottom: var(--space-24);
+
     }
 
     .hero__layout {
-        min-height: auto;
 
-        justify-content: flex-start;
+        min-height: calc(
+            100svh
+            - var(--header-height, 80px)
+            - var(--space-24)
+        );
+
+        justify-content: center;
 
         padding-bottom: 0;
+
     }
 
-    /*
-       En landscape hay muy poca altura disponible.
-       El indicador de scroll deja de aportar valor
-       y puede competir con las redes sociales.
-    */
-    .hero__scroll {
+    .hero__content {
+
+        max-width: 42rem;
+
+        gap: var(--space-12);
+
+    }
+
+    .hero__eyebrow {
+
+        font-size: var(--fs-xs);
+
+        letter-spacing: 0.16em;
+
+    }
+
+    .hero__title {
+
+        font-size: clamp(2rem, 5vw, 3rem);
+
+        line-height: 1;
+
+    }
+
+    .hero__description {
+
+        max-width: 36rem;
+
+        font-size: var(--fs-sm);
+
+        line-height: 1.4;
+
+    }
+
+    .hero__actions {
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        width: auto;
+
+        margin-bottom: 0;
+
+        gap: var(--space-12);
+
+    }
+
+    .hero__actions .btn {
+
+        width: auto;
+
+        min-height: 2.75rem;
+
+    }
+
+    .hero__social {
+
         display: none;
+
+    }
+
+    .hero__scroll {
+
+        display: none;
+
     }
 
 }
@@ -480,6 +551,10 @@
        el scroll para evitar saturación visual */
     .hero__scroll {
         display: none;
+    }
+
+    .hero__background {
+        background-position: 71% center;
     }
 
 }

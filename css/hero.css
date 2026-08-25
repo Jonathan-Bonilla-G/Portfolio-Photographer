@@ -27,7 +27,7 @@
     position: absolute;
     inset: 0;
 
-    background-image: url('../assets/images/hero/hero-bg.jpg');
+    background-image: url('../assets/images/hero-wedding.jpg');
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -43,9 +43,9 @@
 
     background: linear-gradient(
         90deg,
-        rgba(17, 17, 17, 0.95) 0%,
-        rgba(17, 17, 17, 0.7) 50%,
-        rgba(17, 17, 17, 0.25) 100%
+        rgba(17, 17, 17, 0.92) 0%,
+        rgba(17, 17, 17, 0.58) 50%,
+        rgba(17, 17, 17, 0.20) 100%
     );
     z-index: -1;
 }
