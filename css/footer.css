@@ -1,0 +1,228 @@
+/* ==================================================
+   FOOTER SECTION
+   ================================================== */
+
+.footer {
+    background-color: var(--color-background-alt);
+    border-top: 1px solid var(--color-border-dark);
+
+    padding-top: var(--space-48);
+    padding-bottom: var(--space-24);
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------
+   LAYOUT EN GRIDS (MAIN FOOTER)
+   -------------------------------------------------- */
+
+.footer__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: var(--space-48);
+
+    padding-bottom: var(--space-32);
+
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+
+/* --------------------------------------------------
+   1. IDENTIDAD Y REDES (BRAND)
+   -------------------------------------------------- */
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.footer__logo {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+
+    color: var(--color-text);
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+}
+
+.footer__logo:hover,
+.footer__logo:focus-visible {
+    color: var(--color-primary);
+}
+
+.footer__description {
+    max-width: 20rem;
+
+    margin: 0;
+
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+
+/* --------------------------------------------------
+   TITULOS DE COLUMNAS
+   -------------------------------------------------- */
+
+.footer__title {
+    margin: 0 0 var(--space-20) 0;
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--color-text);
+}
+
+
+/* --------------------------------------------------
+   2. NAVEGACIÓN
+   -------------------------------------------------- */
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer__links a {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+}
+
+.footer__links a:hover,
+.footer__links a:focus-visible {
+    color: var(--color-primary);
+}
+
+.footer__links a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+
+/* --------------------------------------------------
+   3. INFORMACIÓN DE CONTACTO
+   -------------------------------------------------- */
+
+.footer__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.footer__contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.footer__contact-label {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    color: var(--color-text-muted);
+}
+
+.footer__contact-item a {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    font-size: var(--fs-sm);
+    color: var(--color-text-soft);
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+}
+
+.footer__contact-item a:hover,
+.footer__contact-item a:focus-visible {
+    color: var(--color-primary);
+}
+
+.footer__contact-item a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+
+/* --------------------------------------------------
+   ICONOS DE CONTACTO
+   -------------------------------------------------- */
+
+.footer__contact-icon {
+    display: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    flex-shrink: 0;
+}
+
+.footer__contact-icon--email {
+    color: var(--color-primary);
+}
+
+/* --------------------------------------------------
+   4. PIE INFERIOR (BOTTOM: COPYRIGHT & PRIVACIDAD)
+   -------------------------------------------------- */
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-16);
+
+    padding-top: var(--space-24);
+
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+.footer__copyright {
+    margin: 0;
+}
+
+.footer__privacy {
+    color: var(--color-text-muted);
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+}
+
+.footer__privacy:hover,
+.footer__privacy:focus-visible {
+    color: var(--color-primary);
+}
+
+.footer__privacy:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
