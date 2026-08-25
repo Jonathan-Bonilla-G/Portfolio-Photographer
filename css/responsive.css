@@ -7,17 +7,13 @@
    NAVBAR
    ================================================== */
 
-/* --------------------------------------------------
-   Desktop XL
-   -------------------------------------------------- */
-@media (min-width: 1600px) {
-
-}
 
 /* --------------------------------------------------
    Laptop
    -------------------------------------------------- */
+
 @media (max-width: 1199px) {
+
     .navbar__list {
         gap: var(--space-16);
     }
@@ -25,12 +21,16 @@
     .navbar__btn {
         padding: var(--space-12) var(--space-20);
     }
+
 }
+
 
 /* --------------------------------------------------
    Tablet
    -------------------------------------------------- */
+
 @media (max-width: 991px) {
+
     .navbar__toggle {
         display: flex;
         position: relative;
@@ -41,25 +41,38 @@
         position: fixed;
         top: 0;
         right: 0;
+
         width: min(80vw, 360px);
         height: 100dvh;
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         padding: var(--space-96) var(--space-32);
+
         background-color: var(--color-background);
+
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
+
         transform: translateX(100%);
         transition: transform var(--transition-normal);
+
         z-index: var(--z-modal);
+
         margin-left: 0;
         flex-grow: 0;
+
+        overflow-y: auto;
     }
 
     .navbar__list {
         width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         gap: var(--space-24);
         margin: 0;
     }
@@ -71,12 +84,16 @@
     .navbar__overlay {
         position: fixed;
         inset: 0;
+
         background-color: rgba(0, 0, 0, 0.55);
+
         opacity: 0;
         visibility: hidden;
-        transition: 
+
+        transition:
             opacity var(--transition-normal),
             visibility var(--transition-normal);
+
         z-index: var(--z-overlay);
     }
 
@@ -88,12 +105,16 @@
         opacity: 1;
         visibility: visible;
     }
+
 }
+
 
 /* --------------------------------------------------
    Mobile
    -------------------------------------------------- */
+
 @media (max-width: 767px) {
+
     .navbar__menu {
         width: min(88vw, 360px);
         padding: var(--space-96) var(--space-24);
@@ -112,14 +133,16 @@
         margin-top: var(--space-20);
         justify-content: center;
     }
+
 }
 
+
 /* --------------------------------------------------
-   MOBILE LANDSCAPE
+   MOBILE / TABLET LANDSCAPE
    Menú a pantalla completa
    -------------------------------------------------- */
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 991px) and (orientation: landscape) {
 
     .navbar__menu {
         width: 100vw;
@@ -128,8 +151,6 @@
         padding:
             var(--space-48)
             var(--space-32);
-
-        overflow-y: auto;
     }
 
     .navbar__list {
@@ -175,7 +196,6 @@
     }
 
 }
-
 
 /* ==================================================
    HERO
