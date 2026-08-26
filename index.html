@@ -13,14 +13,10 @@
         <meta name="robots" content="index, follow">
         <meta name="theme-color" content="#111111">
 
-        <!-- ==================================================
-            FAVICON
-            ================================================== -->
-
+        <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
         <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
         <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 
         <!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn) -->
@@ -91,22 +87,15 @@
 
     <body>
 
-       <!-- =========================
-         SKIP LINK (ACCESIBILIDAD)
-
-    ========================== -->
-    <a href="#main-content" class="skip-link">
+        <!-- Skip Link (Accesibilidad) -->   
+        <a href="#main-content" class="skip-link">
                 Saltar al contenido principal
-
-    </a>
-
+        </a>
 
         <!--  HEADER-->
 
         <header class="header">
-
             <div class="container">
-
                 <nav class="navbar" id="navbar" aria-label="Navegación principal">
 
                     <!-- LOGO-->
@@ -118,53 +107,47 @@
                     <!-- MENU -->
 
                     <div class="navbar__menu" id="navbar-menu">
-                    <ul class="navbar__list">
+                        <ul class="navbar__list">
 
-                        <li class="navbar__item">
-                            <a href="#gallery" class="navbar__link">Galería</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#about" class="navbar__link">Sobre mí</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#services" class="navbar__link">Servicios</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#contact" class="navbar__link">Contacto</a>
-                        </li>
+                            <li class="navbar__item">
+                                <a href="#gallery" class="navbar__link">Galería</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#about" class="navbar__link">Sobre mí</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#services" class="navbar__link">Servicios</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#contact" class="navbar__link">Contacto</a>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                <!-- BOTON-->
+                        <!-- BOTON-->
 
-                    <a href="#contact" class="navbar__btn btn btn--primary">
-                    Reservar sesión
-                    </a>
+                        <a href="#contact" class="navbar__btn btn btn--primary">
+                        Reservar sesión
+                        </a>
+                    </div>
 
-                </div>
+                 <!-- BOTON MENU HAMBUGUESA-->
 
-                <!-- BOTON MENU HAMBUGUESA-->
+                    <button class="navbar__toggle" type="button" aria-controls="navbar-menu" aria-expanded="false" aria-label="Abrir menú de Navegación">
 
-                <button class="navbar__toggle" type="button" aria-controls="navbar-menu" aria-expanded="false" aria-label="Abrir menú de Navegación">
+                        <span class="navbar__bar"></span>
+                        <span class="navbar__bar"></span>
+                        <span class="navbar__bar"></span>
+                    </button>
 
-                    <span class="navbar__bar"></span>
-                    <span class="navbar__bar"></span>
-                    <span class="navbar__bar"></span>
-                </button>
-
-                <!-- OVERLAY -->
-                 <div class="navbar__overlay"></div>
+                    <!-- OVERLAY -->
+                    <div class="navbar__overlay"></div>
 
                 </nav>
-
-
             </div>
-
-
         </header>
 
         <!-- MAIN-->
-
 
         <main id="main-content">
 
@@ -187,46 +170,37 @@
                             <p class="hero__eyebrow">
                                 Fotografía profesional
                             </p>
-
                             <h1 class="hero__title" id="hero-title">
                                 <span class="hero__title-line">
                                     Historias reales,
                                 </span>
-
                                 <span class="hero__title-line hero__title-line--accent">
                                     recuerdos eternos.
                                 </span>
-
                             </h1>
                             <!--DESCRIPCION-->
                             <p class="hero__description">
-
                                 Fotografía profesional para momentos únicos que merecen ser recordados para siempre
                             </p>
 
                             <div class="hero__actions">
-
                                 <a href="#gallery" class="btn btn--primary">
                                     Ver portafolio
                                 </a>
-
                                 <a href="#contact" class="btn btn--secondary">
                                     Reservar sesión
                                 </a>
-
                             </div>
-
                         </div>
 
                         <!-- REDES SOCIALES-->
 
                         <aside class="hero__social" aria-label="Redes sociales">
-
                             <ul class="hero__social-list">
                                 <li>
                                     <a href="#" class="hero__social-link" aria-label="Instagram">
                                         <img
-                                            src="https://cdn.simpleicons.org/instagram"
+                                            src="assets/icons/instagram.svg"
                                             alt=""
                                             aria-hidden="true"
                                         >
@@ -235,7 +209,7 @@
                                 <li>
                                     <a href="#" class="hero__social-link" aria-label="Facebook">
                                         <img
-                                            src="https://cdn.simpleicons.org/facebook"
+                                            src="assets/icons/facebook.svg"
                                             alt=""
                                             aria-hidden="true"
                                         >
@@ -244,7 +218,7 @@
                                 <li>
                                     <a href="#" class="hero__social-link" aria-label="WhatsApp">
                                         <img
-                                            src="https://cdn.simpleicons.org/whatsapp"
+                                            src="assets/icons/whatsapp.svg"
                                             alt=""
                                             aria-hidden="true"
                                         >
@@ -266,655 +240,649 @@
                         </a>
                     </div>
                  </div>
-
-                 <!-- DECORACIONES -->
-
-                 <div class="hero__decorations" aria-hidden="true">
-
-                 </div>
              </section>
 
-<!-- ==================================================
-     GALLERY
-     ================================================== -->
+            <!-- ==================================================
+                GALLERY
+                ================================================== -->
 
-<section class="gallery" id="gallery" aria-labelledby="gallery-title">
+            <section class="gallery" id="gallery" aria-labelledby="gallery-title">
 
-    <!-- --------------------------------------------------
-         GALLERY HEADER
-         -------------------------------------------------- -->
+                <!-- --------------------------------------------------
+                    GALLERY HEADER
+                    -------------------------------------------------- -->
 
-    <header class="gallery__header">
+                <header class="gallery__header">
 
-        <span class="gallery__eyebrow">
-            Galería
-        </span>
-
-        <h2 class="gallery__title" id="gallery-title">
-            Historias que permanecen.
-        </h2>
-
-        <p class="gallery__description">
-            Una selección de momentos, retratos y experiencias
-            capturados con una mirada auténtica y editorial.
-        </p>
-
-    </header>
-
-
-    <!-- --------------------------------------------------
-         GALLERY FILTERS
-         -------------------------------------------------- -->
-
-    <div
-        class="gallery__filters"
-        role="group"
-        aria-label="Filtrar galería"
-    >
-
-        <button
-            class="gallery__filter gallery__filter--active"
-            type="button"
-            data-filter="all"
-            aria-pressed="true"
-        >
-            Todas
-        </button>
-
-        <button
-            class="gallery__filter"
-            type="button"
-            data-filter="retratos"
-            aria-pressed="false"
-        >
-            Retratos
-        </button>
-
-        <button
-            class="gallery__filter"
-            type="button"
-            data-filter="parejas"
-            aria-pressed="false"
-        >
-            Parejas
-        </button>
-
-        <button
-            class="gallery__filter"
-            type="button"
-            data-filter="momentos"
-            aria-pressed="false"
-        >
-            Momentos
-        </button>
-
-        <button
-            class="gallery__filter"
-            type="button"
-            data-filter="editorial"
-            aria-pressed="false"
-        >
-            Editorial
-        </button>
-
-    </div>
-
-
-    <!-- --------------------------------------------------
-         GALLERY GRID
-         -------------------------------------------------- -->
-
-    <ul class="gallery__grid">
-
-
-        <!-- ==============================================
-             RETRATOS
-             ============================================== -->
-
-        <li
-            class="gallery__item gallery__item--featured"
-            data-category="retratos"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir retrato editorial"
-            >
-
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/retrato-01.jpg"
-                    alt="Retrato editorial de una persona con iluminación cinematográfica"
-                    data-title="Retrato editorial"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-                <span class="gallery__overlay" aria-hidden="true">
-
-                    <span class="gallery__icon">
-                        +
+                    <span class="gallery__eyebrow">
+                        Galería
                     </span>
 
-                </span>
+                    <h2 class="gallery__title" id="gallery-title">
+                        Historias que permanecen.
+                    </h2>
 
-            </button>
+                    <p class="gallery__description">
+                        Una selección de momentos, retratos y experiencias
+                        capturados con una mirada auténtica y editorial.
+                    </p>
 
-        </li>
+                </header>
 
 
-        <li
-            class="gallery__item"
-            data-category="retratos"
-        >
+                <!-- --------------------------------------------------
+                    GALLERY FILTERS
+                    -------------------------------------------------- -->
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir retrato en exterior"
-            >
-
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/retrato-02.jpg"
-                    alt="Retrato en exterior con luz natural"
-                    data-title="Retrato en exterior"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
+                <div
+                    class="gallery__filters"
+                    role="group"
+                    aria-label="Filtrar galería"
                 >
 
-                <span class="gallery__overlay" aria-hidden="true">
+                    <button
+                        class="gallery__filter gallery__filter--active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        Todas
+                    </button>
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
+                    <button
+                        class="gallery__filter"
+                        type="button"
+                        data-filter="retratos"
+                        aria-pressed="false"
+                    >
+                        Retratos
+                    </button>
 
-                </span>
+                    <button
+                        class="gallery__filter"
+                        type="button"
+                        data-filter="parejas"
+                        aria-pressed="false"
+                    >
+                        Parejas
+                    </button>
 
-            </button>
+                    <button
+                        class="gallery__filter"
+                        type="button"
+                        data-filter="momentos"
+                        aria-pressed="false"
+                    >
+                        Momentos
+                    </button>
 
-        </li>
+                    <button
+                        class="gallery__filter"
+                        type="button"
+                        data-filter="editorial"
+                        aria-pressed="false"
+                    >
+                        Editorial
+                    </button>
+
+                </div>
 
 
-        <li
-            class="gallery__item gallery__item--wide"
-            data-category="retratos"
-        >
+                <!-- --------------------------------------------------
+                    GALLERY GRID
+                    -------------------------------------------------- -->
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir retrato artístico"
+                <ul class="gallery__grid">
+
+
+                    <!-- ==============================================
+                        RETRATOS
+                        ============================================== -->
+
+                    <li
+                        class="gallery__item gallery__item--featured"
+                        data-category="retratos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir retrato editorial"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-01.jpg"
+                                alt="Retrato editorial de una persona con iluminación cinematográfica"
+                                data-title="Retrato editorial"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="retratos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir retrato en exterior"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-02.jpg"
+                                alt="Retrato en exterior con luz natural"
+                                data-title="Retrato en exterior"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="retratos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir retrato artístico"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-03.jpg"
+                                alt="Retrato artístico con composición editorial"
+                                data-title="Retrato artístico"
+                                width="1600"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="retratos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir retrato en estudio"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/retrato-04.jpg"
+                                alt="Retrato en estudio con iluminación suave"
+                                data-title="Retrato en estudio"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- ==============================================
+                        PAREJAS
+                        ============================================== -->
+
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="parejas"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de pareja"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-01.jpg"
+                                alt="Pareja compartiendo un momento íntimo al aire libre"
+                                data-title="Historias de pareja"
+                                width="1600"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="parejas"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía romántica"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-02.jpg"
+                                alt="Pareja caminando durante una sesión fotográfica"
+                                data-title="Sesión de pareja"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="parejas"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de pareja al atardecer"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/pareja-03.jpg"
+                                alt="Pareja disfrutando un momento al atardecer"
+                                data-title="Momento al atardecer"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- ==============================================
+                        MOMENTOS
+                        ============================================== -->
+
+                    <li
+                        class="gallery__item"
+                        data-category="momentos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de momento espontáneo"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-01.jpg"
+                                alt="Momento espontáneo capturado durante una sesión"
+                                data-title="Momento espontáneo"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="momentos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía documental"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-02.jpg"
+                                alt="Momento documental capturado de forma natural"
+                                data-title="Momento documental"
+                                width="1600"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="momentos"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de celebración"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/momento-03.jpg"
+                                alt="Momento de celebración capturado de manera espontánea"
+                                data-title="Celebración"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <!-- ==============================================
+                        EDITORIAL
+                        ============================================== -->
+
+                    <li
+                        class="gallery__item gallery__item--wide"
+                        data-category="editorial"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía editorial"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/editorial-01.jpg"
+                                alt="Fotografía editorial con composición minimalista"
+                                data-title="Editorial minimalista"
+                                width="1600"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+                    <li
+                        class="gallery__item"
+                        data-category="editorial"
+                    >
+
+                        <button
+                            class="gallery__image-button"
+                            type="button"
+                            aria-label="Abrir fotografía de moda editorial"
+                        >
+
+                            <img
+                                class="gallery__image"
+                                src="assets/images/gallery/editorial-02.jpg"
+                                alt="Fotografía de moda con estética editorial"
+                                data-title="Moda editorial"
+                                width="800"
+                                height="1000"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <span class="gallery__overlay" aria-hidden="true">
+
+                                <span class="gallery__icon">
+                                    +
+                                </span>
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+
+                <!-- --------------------------------------------------
+                    GALLERY CTA
+                    -------------------------------------------------- -->
+
+                <div class="gallery__cta">
+
+                    <p class="gallery__cta-text">
+                        ¿Listo para contar tu historia?
+                    </p>
+
+                    <a
+                        class="btn btn--primary"
+                        href="#contact"
+                    >
+                        Reservar sesión
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                LIGHTBOX
+                ================================================== -->
+
+            <dialog
+                class="lightbox"
+                aria-labelledby="lightbox-title"
             >
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/retrato-03.jpg"
-                    alt="Retrato artístico con composición editorial"
-                    data-title="Retrato artístico"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                <div class="lightbox__container">
 
-                <span class="gallery__overlay" aria-hidden="true">
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <li
-            class="gallery__item"
-            data-category="retratos"
-        >
+                    <!-- --------------------------------------------------
+                        LIGHTBOX HEADER
+                        -------------------------------------------------- -->
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir retrato en estudio"
-            >
+                    <header class="lightbox__header">
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/retrato-04.jpg"
-                    alt="Retrato en estudio con iluminación suave"
-                    data-title="Retrato en estudio"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                        <p
+                            class="lightbox__title"
+                            id="lightbox-title"
+                        >
+                            Fotografía
+                        </p>
 
-                <span class="gallery__overlay" aria-hidden="true">
+                        <button
+                            class="lightbox__close"
+                            type="button"
+                            aria-label="Cerrar fotografía"
+                        >
+                            ×
+                        </button>
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <!-- ==============================================
-             PAREJAS
-             ============================================== -->
-
-        <li
-            class="gallery__item gallery__item--wide"
-            data-category="parejas"
-        >
+                    </header>
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía de pareja"
-            >
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/pareja-01.jpg"
-                    alt="Pareja compartiendo un momento íntimo al aire libre"
-                    data-title="Historias de pareja"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                    <!-- --------------------------------------------------
+                        LIGHTBOX CONTENT
+                        -------------------------------------------------- -->
 
-                <span class="gallery__overlay" aria-hidden="true">
+                    <div class="lightbox__content">
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
+                        <button
+                            class="lightbox__control lightbox__control--prev"
+                            type="button"
+                            aria-label="Fotografía anterior"
+                        >
+                            ‹
+                        </button>
 
-
-        <li
-            class="gallery__item"
-            data-category="parejas"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía romántica"
-            >
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/pareja-02.jpg"
-                    alt="Pareja caminando durante una sesión fotográfica"
-                    data-title="Sesión de pareja"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                        <figure class="lightbox__figure">
 
-                <span class="gallery__overlay" aria-hidden="true">
-
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <li
-            class="gallery__item"
-            data-category="parejas"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía de pareja al atardecer"
-            >
+                            <img
+                                class="lightbox__image"
+                                src=""
+                                alt=""
+                            >
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/pareja-03.jpg"
-                    alt="Pareja disfrutando un momento al atardecer"
-                    data-title="Momento al atardecer"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                        </figure>
 
-                <span class="gallery__overlay" aria-hidden="true">
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <!-- ==============================================
-             MOMENTOS
-             ============================================== -->
-
-        <li
-            class="gallery__item"
-            data-category="momentos"
-        >
+                        <button
+                            class="lightbox__control lightbox__control--next"
+                            type="button"
+                            aria-label="Fotografía siguiente"
+                        >
+                            ›
+                        </button>
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía de momento espontáneo"
-            >
+                    </div>
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/momento-01.jpg"
-                    alt="Momento espontáneo capturado durante una sesión"
-                    data-title="Momento espontáneo"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
 
-                <span class="gallery__overlay" aria-hidden="true">
+                    <!-- --------------------------------------------------
+                        LIGHTBOX FOOTER
+                        -------------------------------------------------- -->
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <li
-            class="gallery__item gallery__item--wide"
-            data-category="momentos"
-        >
+                    <footer class="lightbox__footer">
 
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía documental"
-            >
+                        <span class="lightbox__counter">
+                            1 / 12
+                        </span>
 
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/momento-02.jpg"
-                    alt="Momento documental capturado de forma natural"
-                    data-title="Momento documental"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
+                    </footer>
 
-                <span class="gallery__overlay" aria-hidden="true">
+                </div>
 
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <li
-            class="gallery__item"
-            data-category="momentos"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía de celebración"
-            >
-
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/momento-03.jpg"
-                    alt="Momento de celebración capturado de manera espontánea"
-                    data-title="Celebración"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-                <span class="gallery__overlay" aria-hidden="true">
-
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <!-- ==============================================
-             EDITORIAL
-             ============================================== -->
-
-        <li
-            class="gallery__item gallery__item--wide"
-            data-category="editorial"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía editorial"
-            >
-
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/editorial-01.jpg"
-                    alt="Fotografía editorial con composición minimalista"
-                    data-title="Editorial minimalista"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-                <span class="gallery__overlay" aria-hidden="true">
-
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-
-        <li
-            class="gallery__item"
-            data-category="editorial"
-        >
-
-            <button
-                class="gallery__image-button"
-                type="button"
-                aria-label="Abrir fotografía de moda editorial"
-            >
-
-                <img
-                    class="gallery__image"
-                    src="assets/images/gallery/editorial-02.jpg"
-                    alt="Fotografía de moda con estética editorial"
-                    data-title="Moda editorial"
-                    width="800"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-                <span class="gallery__overlay" aria-hidden="true">
-
-                    <span class="gallery__icon">
-                        +
-                    </span>
-
-                </span>
-
-            </button>
-
-        </li>
-
-    </ul>
-
-
-    <!-- --------------------------------------------------
-         GALLERY CTA
-         -------------------------------------------------- -->
-
-    <div class="gallery__cta">
-
-        <p class="gallery__cta-text">
-            ¿Listo para contar tu historia?
-        </p>
-
-        <a
-            class="btn btn--primary"
-            href="#contact"
-        >
-            Reservar sesión
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     LIGHTBOX
-     ================================================== -->
-
-<dialog
-    class="lightbox"
-    aria-labelledby="lightbox-title"
->
-
-    <div class="lightbox__container">
-
-
-        <!-- --------------------------------------------------
-             LIGHTBOX HEADER
-             -------------------------------------------------- -->
-
-        <header class="lightbox__header">
-
-            <p
-                class="lightbox__title"
-                id="lightbox-title"
-            >
-                Fotografía
-            </p>
-
-            <button
-                class="lightbox__close"
-                type="button"
-                aria-label="Cerrar fotografía"
-            >
-                ×
-            </button>
-
-        </header>
-
-
-        <!-- --------------------------------------------------
-             LIGHTBOX CONTENT
-             -------------------------------------------------- -->
-
-        <div class="lightbox__content">
-
-            <button
-                class="lightbox__control lightbox__control--prev"
-                type="button"
-                aria-label="Fotografía anterior"
-            >
-                ‹
-            </button>
-
-
-            <figure class="lightbox__figure">
-
-                <img
-                    class="lightbox__image"
-                    src=""
-                    alt=""
-                >
-
-            </figure>
-
-
-            <button
-                class="lightbox__control lightbox__control--next"
-                type="button"
-                aria-label="Fotografía siguiente"
-            >
-                ›
-            </button>
-
-        </div>
-
-
-        <!-- --------------------------------------------------
-             LIGHTBOX FOOTER
-             -------------------------------------------------- -->
-
-        <footer class="lightbox__footer">
-
-            <span class="lightbox__counter">
-                1 / 12
-            </span>
-
-        </footer>
-
-    </div>
-
-</dialog>
+            </dialog>
               <!-- ==================================================
      ABOUT
      ================================================== -->
