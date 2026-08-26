@@ -53,7 +53,7 @@ if (gallery) {
 
             button.setAttribute(
                 "aria-pressed",
-                isActive
+                isActive ? "true" : "false"
             );
 
         });
@@ -265,14 +265,14 @@ if (gallery) {
 
 
             if (event.key === "ArrowLeft") {
-
+                event.preventDefault();
                 showPrevious();
 
             }
 
 
             if (event.key === "ArrowRight") {
-
+                event.preventDefault();
                 showNext();
 
             }
@@ -321,6 +321,10 @@ if (gallery) {
             /* Abrir Lightbox */
 
             lightbox.showModal();
+
+            /* Enfocar boton de cierre para accesibilidad */
+
+            closeButton?.focus();
 
         };
 

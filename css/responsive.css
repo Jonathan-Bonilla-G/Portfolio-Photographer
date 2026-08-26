@@ -702,7 +702,7 @@
     }
 
     .gallery__item--wide {
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 4 / 3;
     }
 
 
@@ -839,6 +839,9 @@
 
         width: 2.75rem;
         height: 2.75rem;
+        border-radius: var(--radius-full);
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
     }
 
     .lightbox__control--prev {
