@@ -4,9 +4,11 @@
  * Controla:
  * - Menú móvil
  * - Accesibilidad ARIA
+ * - Gestión del foco
  * - Bloqueo de scroll
  * - Overlay
  * - Cierre con Escape
+ * - Focus trap
  * - Cambio entre móvil y desktop
  * - Estado visual del header al hacer scroll
  */
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --------------------------------------------------
 
     const navbar = document.getElementById('navbar');
+    const menu = document.getElementById('navbar-menu');
     const toggleBtn = document.querySelector('.navbar__toggle');
     const overlay = document.querySelector('.navbar__overlay');
     const navLinks = document.querySelectorAll(
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. GUARDIA DE SEGURIDAD
     // --------------------------------------------------
 
-    if (!navbar || !toggleBtn || !overlay) return;
+    if (!navbar || !menu || !toggleBtn || !overlay) return;
 
 
     // --------------------------------------------------
@@ -43,7 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 4. CONTROL DEL ESTADO DEL MENÚ
+    // 4. ELEMENTOS FOCUSABLES DEL MENÚ
+    // --------------------------------------------------
+
+    const getFocusableElements = () => {
+
+        return menu.querySelectorAll(
+            'a[href], button:not([disabled]), ' +
+            'input:not([disabled]), ' +
+            'select:not([disabled]), ' +
+            'textarea:not([disabled]), ' +
+            '[tabindex]:not([tabindex="-1"])'
+        );
+
+    };
+
+
+    // --------------------------------------------------
+    // 5. CONTROL DEL ESTADO DEL MENÚ
     // --------------------------------------------------
 
     const setMenuState = (forceState) => {
@@ -55,10 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         // Estado visual
-        navbar.classList.toggle('is-open', isOpen);
+        navbar.classList.toggle(
+            'is-open',
+            isOpen
+        );
 
 
-        // Accesibilidad
+        // Accesibilidad del botón
         toggleBtn.setAttribute(
             'aria-expanded',
             String(isOpen)
@@ -72,14 +95,60 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
 
+        // Estado de accesibilidad del menú
+        // Solo se aplica ocultamiento en móvil.
+        if (desktopMediaQuery.matches) {
+
+            menu.setAttribute(
+                'aria-hidden',
+                'false'
+            );
+
+            menu.inert = false;
+
+        } else {
+
+            menu.setAttribute(
+                'aria-hidden',
+                String(!isOpen)
+            );
+
+            menu.inert = !isOpen;
+        }
+
+
         // Bloquear / liberar scroll
         document.body.style.overflow =
             isOpen ? 'hidden' : '';
+
+
+        // Gestión del foco
+        if (isOpen) {
+
+            const focusableElements =
+                getFocusableElements();
+
+            if (focusableElements.length) {
+
+                requestAnimationFrame(() => {
+                    focusableElements[0].focus();
+                });
+
+            }
+
+        } else if (!desktopMediaQuery.matches) {
+
+            requestAnimationFrame(() => {
+                toggleBtn.focus();
+            });
+
+        }
+
     };
 
 
     // --------------------------------------------------
-    // 5. HEADER — ESTADO AL HACER SCROLL
+    // 6. HEADER — ESTADO AL HACER SCROLL
     // --------------------------------------------------
 
     const handleScroll = () => {
@@ -90,11 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'header--scrolled',
             window.scrollY > 20
         );
+
     };
 
 
     // --------------------------------------------------
-    // 6. BOTÓN HAMBURGUESA
+    // 7. BOTÓN HAMBURGUESA
     // --------------------------------------------------
 
     toggleBtn.addEventListener(
@@ -104,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 7. OVERLAY
+    // 8. OVERLAY
     // --------------------------------------------------
 
     overlay.addEventListener(
@@ -114,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 8. ENLACES DEL MENÚ
+    // 9. ENLACES DEL MENÚ
     // --------------------------------------------------
 
     navLinks.forEach(link => {
@@ -128,23 +198,89 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 9. TECLA ESCAPE
+    // 10. TECLADO — ACCESIBILIDAD Y FOCUS TRAP
     // --------------------------------------------------
 
     document.addEventListener('keydown', event => {
 
+        // ESCAPE
         if (
             event.key === 'Escape' &&
             navbar.classList.contains('is-open')
         ) {
+
+            event.preventDefault();
+
             setMenuState(false);
+
+            return;
+        }
+
+
+        // FOCUS TRAP
+        if (
+            event.key !== 'Tab' ||
+            !navbar.classList.contains('is-open')
+        ) {
+            return;
+        }
+
+
+        const menuFocusables =
+            Array.from(getFocusableElements());
+
+
+        // El botón de cierre forma parte
+        // del ciclo de navegación por teclado
+        const focusableElements = [
+            ...menuFocusables,
+            toggleBtn
+        ];
+
+
+        if (!focusableElements.length) return;
+
+
+        const firstFocusable =
+            focusableElements[0];
+
+        const lastFocusable =
+            focusableElements[
+                focusableElements.length - 1
+            ];
+
+
+        // TAB en el último elemento → primero
+        if (
+            !event.shiftKey &&
+            document.activeElement === lastFocusable
+        ) {
+
+            event.preventDefault();
+
+            firstFocusable.focus();
+
+            return;
+        }
+
+
+        // SHIFT + TAB en el primero → último
+        if (
+            event.shiftKey &&
+            document.activeElement === firstFocusable
+        ) {
+
+            event.preventDefault();
+
+            lastFocusable.focus();
+
         }
 
     });
 
 
     // --------------------------------------------------
-    // 10. CAMBIO A DESKTOP
+    // 11. CAMBIO ENTRE MÓVIL Y DESKTOP
     // --------------------------------------------------
 
     desktopMediaQuery.addEventListener(
@@ -152,7 +288,35 @@ document.addEventListener('DOMContentLoaded', () => {
         event => {
 
             if (event.matches) {
-                setMenuState(false);
+
+                // Cerrar estado móvil
+                navbar.classList.remove('is-open');
+
+
+                // Restaurar estado del botón
+                toggleBtn.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+                toggleBtn.setAttribute(
+                    'aria-label',
+                    'Abrir menú de navegación'
+                );
+
+
+                // Restaurar accesibilidad del menú
+                menu.setAttribute(
+                    'aria-hidden',
+                    'false'
+                );
+
+                menu.inert = false;
+
+
+                // Restaurar scroll
+                document.body.style.overflow = '';
+
             }
 
         }
@@ -160,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 11. HEADER AL HACER SCROLL
+    // 12. HEADER AL HACER SCROLL
     // --------------------------------------------------
 
     window.addEventListener(
@@ -171,9 +335,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --------------------------------------------------
-    // 12. ESTADO INICIAL
+    // 13. ESTADO INICIAL
     // --------------------------------------------------
 
+    toggleBtn.setAttribute(
+        'aria-expanded',
+        'false'
+    );
+
+    toggleBtn.setAttribute(
+        'aria-label',
+        'Abrir menú de navegación'
+    );
+
+
+    if (desktopMediaQuery.matches) {
+
+        menu.setAttribute(
+            'aria-hidden',
+            'false'
+        );
+
+        menu.inert = false;
+
+    } else {
+
+        menu.setAttribute(
+            'aria-hidden',
+            'true'
+        );
+
+        menu.inert = true;
+
+    }
+
+
+    // Estado inicial del header
     handleScroll();
 
 });
