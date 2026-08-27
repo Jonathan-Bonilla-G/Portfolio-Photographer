@@ -1266,18 +1266,6 @@
 
 @media (max-width: 991px) {
 
-    .instagram {
-        padding-block: var(--space-96);
-    }
-
-    .instagram__header {
-        margin-bottom: var(--space-48);
-    }
-
-    .instagram__title {
-        font-size: var(--fs-3xl);
-    }
-
     .instagram__description {
         max-width: 36rem;
     }
@@ -1373,28 +1361,7 @@
 }
 
 
-/* ==================================================
-   INSTAGRAM — REDUCED MOTION
-   ================================================== */
 
-@media (prefers-reduced-motion: reduce) {
-
-    .instagram__image,
-    .instagram__overlay,
-    .instagram__username,
-    .instagram__cta-link {
-        transition: none;
-    }
-
-    .instagram__item:hover .instagram__image {
-        transform: none;
-    }
-
-    .instagram__cta-link:hover {
-        gap: var(--space-8);
-    }
-
-}
 
 /* ========================================
    CONTACT — TABLET

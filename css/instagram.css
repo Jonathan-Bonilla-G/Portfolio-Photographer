@@ -109,7 +109,7 @@
     padding: var(--space-16);
     background-color: rgba(17, 17, 17, 0);
     color: var(--color-white);
-    font-size: var(-fs-lg);
+    font-size: var(--fs-lg);
     opacity: 0;
     transition:
         background-color var(--transition-normal),
