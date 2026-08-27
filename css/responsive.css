@@ -911,6 +911,10 @@
 
 @media (max-width: 1199px) {
 
+    .about {
+        padding-block: var(--space-80);
+    }
+
     .about__content {
         gap: var(--space-64);
     }
@@ -929,15 +933,24 @@
 
     .about__stats {
         max-width: 900px;
+        margin-top: var(--space-80);
     }
 }
 
 /* ==================================================
    ABOUT — TABLET
-   899px
+   959px
    ================================================== */
 
 @media(max-width:959px){
+
+    .about {
+        padding-block: var(--space-64);
+    }
+
+    .about__header {
+        margin-bottom: var(--space-48);
+    }
 
     .about__content{
         grid-template-columns: 1fr;
@@ -947,11 +960,18 @@
     .about__image{
         max-width: 600px;
         margin-inline: auto;
+        
+        
     }
 
     .about__info{
         max-width: 680px;
         margin-inline: auto;
+    }
+
+    .about__stats {
+        margin-top: var(--space-64);
+        padding-top: var(--space-32);
     }
 }
 
