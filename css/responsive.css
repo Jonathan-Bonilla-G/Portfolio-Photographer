@@ -1000,9 +1000,7 @@
     .services__header {
         margin-bottom: var(--space-64);
     }
-
 }
-
 
 /* --------------------------------------------------
    MOBILE
@@ -1053,7 +1051,7 @@
     .service {
         grid-template-columns: 56px minmax(0, 1fr);
         gap: var(--space-20);
-        min-height: 280px;
+        min-height: auto;
         padding: var(--space-32) var(--space-20);
     }
 
@@ -1068,7 +1066,7 @@
     /* SERVICE NUMBER */
 
     .service__number {
-        font-size: var(--fs-2xl);
+        font-size: var(--fs-xl);
     }
 
 
@@ -1105,6 +1103,15 @@
         padding-block: var(--space-32);
     }
 
+    .services__cta-title{
+            font-size: var(--fs-2xl);
+
+    }
+
+    .services__cta-description{
+        font-size: var(--fs-lg);
+    }
+
 }
 
 
@@ -1137,7 +1144,6 @@
     .service {
         grid-template-columns: 44px minmax(0, 1fr);
         gap: var(--space-16);
-        min-height: 260px;
         padding: var(--space-24) var(--space-16);
     }
 
@@ -1161,6 +1167,19 @@
         margin-top: var(--space-40);
         padding-block: var(--space-24);
     }
+
+    .services__cta-title{
+            font-size: var(--fs-lg);
+
+    }
+
+    .services__cta-description{
+        font-size: var(--fs-sm);
+    }
+
+    
+
+
 
 }
 
