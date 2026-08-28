@@ -544,7 +544,7 @@
 @media (max-width: 991px) {
 
     .gallery__header {
-        margin-bottom: var(--space-40);
+        margin-bottom: var(--space-48);
     }
 
     .gallery__title {
@@ -553,7 +553,7 @@
 
     .gallery__filters {
         gap: var(--space-20);
-        margin-bottom: var(--space-40);
+        margin-bottom: var(--space-32);
     }
 
     .gallery__grid {
@@ -755,7 +755,7 @@
     }
 
     .gallery__cta {
-        margin-top: var(--space-40);
+        margin-top: var(--space-32);
         padding: 0 var(--space-16);
     }
 
@@ -1127,7 +1127,7 @@
     }
 
     .services__header {
-        margin-bottom: var(--space-40);
+        margin-bottom: var(--space-32);
     }
 
     .services__title {
@@ -1164,7 +1164,7 @@
     /* CTA */
 
     .services__cta {
-        margin-top: var(--space-40);
+        margin-top: var(--space-32);
         padding-block: var(--space-24);
     }
 
@@ -1290,7 +1290,7 @@
     }
 
     .instagram__header {
-        margin-bottom: var(--space-40);
+        margin-bottom: var(--space-32);
     }
 
     .instagram__eyebrow {
@@ -1321,7 +1321,7 @@
     }
 
     .instagram__cta {
-        margin-top: var(--space-40);
+        margin-top: var(--space-32);
     }
 
 }

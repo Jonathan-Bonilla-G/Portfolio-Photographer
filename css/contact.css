@@ -77,6 +77,13 @@
     color: var(--color-primary);
 }
 
+.contact__detail-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-xs, 2px);
+}
+
+
 /* ========================================
    FORM
 ======================================== */
@@ -151,6 +158,7 @@
 .contact__field input:focus,
 .contact__field select:focus,
 .contact__field textarea:focus {
-    outline: none;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
     border-bottom-color: var(--color-primary);
 }

@@ -55,6 +55,12 @@
     color: var(--color-primary);
 }
 
+.footer__logo:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-xs, 2px);
+}
+
 .footer__description {
     max-width: 20rem;
 
